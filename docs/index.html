@@ -53,8 +53,7 @@
     transition: opacity 0.15s;
     flex-shrink: 0;
   }
-  .header-logo-link:hover { opacity: 0.8; }
-  .header-logo-link img { height: 36px; width: auto; display: block; }
+  .header-logo-link:hover { opacity: 0.75; }
 
   .header-divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
 
@@ -243,10 +242,16 @@
 <header>
   <div class="header-left">
     <a class="header-logo-link" href="https://my.sonance.com/SignIn?returnUrl=%2f" target="_blank" rel="noopener noreferrer">
-      <img
-        src="data:image/png;base64,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"
-        alt="Sonance | James | IPORT"
-      />
+      <svg width="180" height="36" viewBox="0 0 180 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sonance | James | iPort">
+        <!-- SONANCE -->
+        <text x="0" y="24" font-family="'DM Sans', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.5" fill="#1a2a39">Sonance</text>
+        <!-- dot separator -->
+        <circle cx="80" cy="18" r="2.2" fill="#00A3E2"/>
+        <!-- James -->
+        <text x="87" y="24" font-family="'DM Sans', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5c5a54">James</text>
+        <!-- iPort -->
+        <text x="132" y="24" font-family="'DM Sans', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#5c5a54">iPort</text>
+      </svg>
     </a>
     <div class="header-divider"></div>
     <span class="header-title">Inside Sales Support Library &amp; Resource Center</span>
@@ -425,7 +430,7 @@ const REPOSITORY = [
     ]
   },
 
-  // ── MARKETING — ADD NEW ITEMS AT THE TOP. REMOVE OLD ITEMS FROM THE BOTTOM.
+  // ── MARKETING
   {
     section: "Marketing",
     sectionUrl: "https://app.box.com/s/6osaadw2adlc0svkt3ce3gmuzrxw1j6x",
