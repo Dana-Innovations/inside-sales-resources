@@ -60,6 +60,12 @@
     display: block;
   }
 
+  .header-logo-svg {
+    display: block;
+    height: 32px;
+    width: auto;
+  }
+
   .header-title {
     font-size: 13px;
     font-weight: 400;
@@ -247,8 +253,19 @@
 
 <header>
   <div class="header-left">
-    <a class="header-logo-link" href="https://sonance.com" target="_blank" rel="noopener noreferrer">
-      <img class="header-logo" src="https://cdn.shopify.com/s/files/1/0662/2208/9690/files/Sonance_Logo_Dark.svg" alt="Sonance">
+    <a class="header-logo-link" href="https://my.sonance.com/SignIn?returnUrl=%2f" target="_blank" rel="noopener noreferrer">
+      <svg class="header-logo-svg" viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" aria-label="Sonance · James · iPort">
+        <!-- SONANCE wordmark -->
+        <text x="0" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2a39" letter-spacing="0.5">Sonance</text>
+        <!-- Dot separator -->
+        <text x="105" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#9e9c96"> · </text>
+        <!-- James -->
+        <text x="122" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5c5a54">James</text>
+        <!-- Dot separator -->
+        <text x="162" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#9e9c96"> · </text>
+        <!-- iPort -->
+        <text x="179" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5c5a54">iPort</text>
+      </svg>
     </a>
     <span class="header-title">Inside Sales Support Library &amp; Resource Center</span>
   </div>
@@ -427,6 +444,7 @@ const REPOSITORY = [
   },
 
   // ── MARKETING ─────────────────────────────────────────────────────
+  // ADD NEW ITEMS AT THE TOP. REMOVE OLD ITEMS FROM THE BOTTOM.
   {
     section: "Marketing",
     sectionUrl: "https://app.box.com/s/6osaadw2adlc0svkt3ce3gmuzrxw1j6x",
