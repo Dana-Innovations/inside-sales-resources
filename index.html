@@ -21,9 +21,10 @@
   }
   body { font-family: var(--font); background: var(--bg); color: var(--dark); min-height: 100vh; }
 
-  .header { background: #fff; border-bottom: 3px solid var(--blue); padding: 16px 32px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .header-logo { width: 38px; height: 38px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .header-logo svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .header { background: #fff; border-bottom: 3px solid var(--blue); padding: 14px 32px; display: flex; align-items: center; gap: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .header-logo-link { display: flex; align-items: center; flex-shrink: 0; text-decoration: none; }
+  .header-logo-link img { height: 36px; width: auto; display: block; }
+  .header-divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
   .header-text h1 { font-size: 17px; font-weight: 600; color: var(--dark); }
   .header-text p { font-size: 11px; color: var(--label-color); font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 1px; }
 
@@ -76,11 +77,15 @@
 <body>
 
 <div class="header">
-  <div class="header-logo">
-    <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-  </div>
+  <a class="header-logo-link" href="https://my.sonance.com/SignIn?returnUrl=%2f" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://brand.sonance.com/logos/sonance-james-iport/Sonance_James_IPORT_Lockup_Dark.png"
+      alt="Sonance | James | IPORT"
+    />
+  </a>
+  <div class="header-divider"></div>
   <div class="header-text">
-    <h1>ISS Repository Manager</h1>
+    <h1>Inside Sales Support Library &amp; Resource Center</h1>
     <p>Sonance Inside Sales · Powered by Claude</p>
   </div>
 </div>
@@ -293,9 +298,9 @@ async function applyChanges() {
     let result = (data.content || []).map(b => b.text || '').join('');
     result = result.replace(/^```html?\n?/i, '').replace(/```$/, '').trim();
     if (!result.startsWith('<!') && !result.toLowerCase().startsWith('<html')) throw new Error("Response doesn't look like valid HTML. Please try again.");
-    addLog('File updated successfully \u2713');
+    addLog('File updated successfully ✓');
     window._lastResult = result;
-    document.getElementById('successMsg').innerHTML = '<div class="alert alert-success">\u2705 Repository updated \u2014 ready to download</div><button class="btn-download" onclick="downloadResult()">\u2b07 Download Updated Repository</button><div style="font-size:12px;color:var(--muted);text-align:center;margin-top:8px;">Upload this file to your Teams Channel SharePoint folder to replace the existing one.</div>';
+    document.getElementById('successMsg').innerHTML = '<div class="alert alert-success">✅ Repository updated — ready to download</div><button class="btn-download" onclick="downloadResult()">⬇ Download Updated Repository</button><div style="font-size:12px;color:var(--muted);text-align:center;margin-top:8px;">Upload this file to your Teams Channel SharePoint folder to replace the existing one.</div>';
   } catch (err) {
     showError('Error: ' + err.message);
     addLog('Failed: ' + err.message);
