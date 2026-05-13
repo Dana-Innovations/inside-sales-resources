@@ -32,7 +32,7 @@
 
   header {
     background: var(--header-bg);
-    padding: 18px 32px;
+    padding: 14px 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,20 +51,12 @@
     text-decoration: none;
     opacity: 1;
     transition: opacity 0.15s;
+    flex-shrink: 0;
   }
   .header-logo-link:hover { opacity: 0.8; }
+  .header-logo-link img { height: 36px; width: auto; display: block; }
 
-  .header-logo {
-    height: 32px;
-    width: auto;
-    display: block;
-  }
-
-  .header-logo-svg {
-    display: block;
-    height: 32px;
-    width: auto;
-  }
+  .header-divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
 
   .header-title {
     font-size: 13px;
@@ -72,8 +64,6 @@
     color: #1a2a39;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding-left: 16px;
-    border-left: 1px solid #d0cec6;
     line-height: 1;
   }
   .header-right { display: flex; align-items: center; gap: 16px; }
@@ -254,19 +244,12 @@
 <header>
   <div class="header-left">
     <a class="header-logo-link" href="https://my.sonance.com/SignIn?returnUrl=%2f" target="_blank" rel="noopener noreferrer">
-      <svg class="header-logo-svg" viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" aria-label="Sonance · James · iPort">
-        <!-- SONANCE wordmark -->
-        <text x="0" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2a39" letter-spacing="0.5">Sonance</text>
-        <!-- Dot separator -->
-        <text x="105" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#9e9c96"> · </text>
-        <!-- James -->
-        <text x="122" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5c5a54">James</text>
-        <!-- Dot separator -->
-        <text x="162" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#9e9c96"> · </text>
-        <!-- iPort -->
-        <text x="179" y="28" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5c5a54">iPort</text>
-      </svg>
+      <img
+        src="https://brand.sonance.com/logos/sonance-james-iport/Sonance_James_IPORT_Lockup_Dark.png"
+        alt="Sonance | James | IPORT"
+      />
     </a>
+    <div class="header-divider"></div>
     <span class="header-title">Inside Sales Support Library &amp; Resource Center</span>
   </div>
   <div class="header-right">
